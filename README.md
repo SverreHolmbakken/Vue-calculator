@@ -1,2 +1,3 @@
-# vue-calculator
+# Vue Calculator
 
+This project was made to 
