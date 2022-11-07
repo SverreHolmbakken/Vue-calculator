@@ -50,6 +50,7 @@
 
 		created() {
 			window.addEventListener('keyup', this.handleKeyup);
+			window.addEventListener('keydown', this.handleKeydown);
 		},
 		
 		computed: {
@@ -79,6 +80,7 @@
 			},
 
 			backSpaceResult() {
+				// Bendik solution in comment, worked too
 				// this.currentInput = this.currentInput.slice(0, this.currentInput.length-1);
 				this.currentInput = this.currentInput.slice(0, -1);
 			},
@@ -136,8 +138,15 @@
 						this.handleEqualsInput()
 						break;
 					case 'Escape':
-					case 'Backspace':
 						this.clearResult()
+						break;
+				}
+			},
+
+			handleKeydown(event) {
+				switch(event.key) {
+					case 'Backspace':
+						this.backSpaceResult()
 						break;
 				}
 			}
