@@ -2,7 +2,7 @@
 	<section class="calculator">
 		<div class="calculator__output">
 			<div class="calculator__output-text">
-				{{ showingResult ? currentResult : currentInput }} 
+				{{ showingResult ? currentResult : currentInput }}
 			</div>
 		</div>
 
