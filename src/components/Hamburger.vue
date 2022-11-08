@@ -1,19 +1,23 @@
 <template>
 	<section>
 		<div class="hamburger-menu--closed">
-			<svg width="88" height="54" viewBox="0 0 88 54" fill="none" xmlns="http://www.w3.org/2000/svg">
-				<rect width="88" height="10" rx="5" fill="#D9D9D9"/>
-				<rect y="22" width="88" height="10" rx="5" fill="#D9D9D9"/>
-				<rect y="44" width="88" height="10" rx="5" fill="#D9D9D9"/>
-			</svg>
+			<button @click="openMenu()">
+				<svg width="88" height="54" viewBox="0 0 88 54" fill="none" xmlns="http://www.w3.org/2000/svg">
+					<rect width="88" height="10" rx="5" fill="#D9D9D9"/>
+					<rect y="22" width="88" height="10" rx="5" fill="#D9D9D9"/>
+					<rect y="44" width="88" height="10" rx="5" fill="#D9D9D9"/>
+				</svg>
+			</button>
 		</div>
 
 		<div class="hamburger-menu--open">
 			<div class="hamburger-menu__top-box">
-				<svg width="70" height="70" viewBox="0 0 70 70" fill="none" xmlns="http://www.w3.org/2000/svg">
-					<rect y="62.2254" width="88" height="10" rx="5" transform="rotate(-45 0 62.2254)" fill="#D9D9D9"/>
-					<rect x="7.07108" width="88" height="10" rx="5" transform="rotate(45 7.07108 0)" fill="#D9D9D9"/>
-				</svg>
+				<button :class="{  }" @click="closeMenu()">
+						<svg width="70" height="70" viewBox="0 0 70 70" fill="none" xmlns="http://www.w3.org/2000/svg">
+							<rect y="62.2254" width="88" height="10" rx="5" transform="rotate(-45 0 62.2254)" fill="#D9D9D9"/>
+							<rect x="7.07108" width="88" height="10" rx="5" transform="rotate(45 7.07108 0)" fill="#D9D9D9"/>
+						</svg>
+				</button>
 
 				<h2 class="hamburger-menu__title">Konvertering</h2>
 			</div>
@@ -37,7 +41,13 @@
 		},
 
 		methods: {
-			
+			openMenu() {
+
+			},
+
+			closeMenu() {
+				this.
+			}
 		}
 	}
 </script>

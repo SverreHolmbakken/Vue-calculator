@@ -1,4 +1,8 @@
 <template>
+	<div class="title">
+		<h1 class="title__text">Kalkis</h1>
+	</div>
+	
 	<section class="calculator">
 		<div class="calculator__output">
 			<div class="calculator__output-text">
