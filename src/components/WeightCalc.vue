@@ -1,6 +1,6 @@
 <template>
 	<div class="title">
-		<h1 class="title__text">Lengdis</h1>
+		<h1 class="title__text">Vekta</h1>
 	</div>
 	<section class="converter">
 		<div class="converter__input-frame">
