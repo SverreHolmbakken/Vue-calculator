@@ -3,39 +3,50 @@
 		<h2 class="hamburger-component__title">Konvertering</h2>
 		
 		<div class="hamburger-component__subtitle">
-			<button class="hamburger-component__subtitle-text">Kalkulator</button>
-			<button class="hamburger-component__subtitle-text">Distanse</button>
-			<button class="hamburger-component__subtitle-text">Vekt og masse</button>
-			<button class="hamburger-component__subtitle-text">Temperatur</button>
+			<button @click="switchComponent('Calculator')" class="hamburger-component__subtitle-text">Kalkulator</button>
+			<button @click="switchComponent('LengthCalc')" class="hamburger-component__subtitle-text">Distanse</button>
+			<button @click="switchComponent('WeightCalc')" class="hamburger-component__subtitle-text">Vekt og masse</button>
+			<button @click="switchComponent('TemperatureCalc')" class="hamburger-component__subtitle-text">Temperatur</button>
 		</div>
 
 		<div class="hamburger-component__title-underline"></div>
 		
 	</HamburgerCopy>	
 	
-	<!-- <Calculator/> -->
-	<!-- <Hamburger/> -->
+	<Calculator v-if="selectedComponent === 'Calculator'" />
+	<LengthCalc v-if="selectedComponent === 'LengthCalc'" />
+	<WeightCalc v-if="selectedComponent === 'WeightCalc'" />
+	<TemperatureCalc v-if="selectedComponent === 'TemperatureCalc'" />
 	<!-- <HamburgerCopy/> -->
-	<LengthCalc/>
 </template>
 
 <script>
 
-	// import Calculator from '../components/Calculator.vue';
-	// import Hamburger from '../components/Hamburger.vue';
+	import Calculator from '../components/Calculator.vue';
 	import HamburgerCopy from '../components/HamburgerCopy.vue';
 	import LengthCalc from '../components/LengthCalc.vue';
+	import WeightCalc from '../components/WeightCalc.vue';
+	import TemperatureCalc from '../components/TemperatureCalc.vue';
 	
 	export default {
 		components: {
-			// Calculator,
-			// Hamburger,
+			Calculator,
 			HamburgerCopy,
 			LengthCalc,
+			WeightCalc,
+			TemperatureCalc,
+
 		},
+
 		data() {
 			return {
 				selectedComponent: 'Calculator'
+			}
+		},
+
+		methods: {
+			switchComponent(componentName) {
+				this.selectedComponent = componentName;
 			}
 		}
 	}
@@ -62,6 +73,7 @@
 		position: fixed;
 		height: 15%;
 		left: 50%;
+		top: 0;
 		transform: translate(-50%);
 		width: fit-content;
 		z-index: 1;
