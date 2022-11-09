@@ -218,8 +218,8 @@
 	.switch-icon {
 		position: fixed;
 		top: 42.5%;
-		left: 62%;
-		/* transform: translate(-50%, -50%); */
+		left: 50%;
+		transform: translate(-50%, 0%);
 	}
 
 	.switch-icon img {
