@@ -32,12 +32,12 @@
 
 		</div>
 
-		<div class="calculator-advanced__info">
+		<!-- <div class="calculator-advanced__info">
 			<div>currentResult: {{ currentResult }}</div>
 			<div>currentInput: {{ `"${currentInput}"` || `""` }}</div>
 			<div>currentInputAsNumber: {{ currentInputAsNumber }}</div>
 			<div>currentOperator: {{ currentOperator || `""` }}</div>
-		</div>
+		</div> -->
 	</section>
 </template>
 
