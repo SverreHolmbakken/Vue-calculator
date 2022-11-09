@@ -2,14 +2,16 @@
 	<HamburgerCopy :title="''">
 		<h2 class="hamburger-component__title">Konvertering</h2>
 		
+		<div class="hamburger-component__title-underline"></div>
+		
 		<div class="hamburger-component__subtitle">
 			<button @click="switchComponent('Calculator')" class="hamburger-component__subtitle-text">Kalkulator</button>
 			<button @click="switchComponent('LengthCalc')" class="hamburger-component__subtitle-text">Distanse</button>
 			<button @click="switchComponent('WeightCalc')" class="hamburger-component__subtitle-text">Vekt og masse</button>
 			<button @click="switchComponent('TemperatureCalc')" class="hamburger-component__subtitle-text">Temperatur</button>
+			<button @click="switchComponent('CurrencyCalc')" class="hamburger-component__subtitle-text">Valuta</button>
 		</div>
 
-		<div class="hamburger-component__title-underline"></div>
 		
 	</HamburgerCopy>	
 	
@@ -17,6 +19,7 @@
 	<LengthCalc v-if="selectedComponent === 'LengthCalc'" />
 	<WeightCalc v-if="selectedComponent === 'WeightCalc'" />
 	<TemperatureCalc v-if="selectedComponent === 'TemperatureCalc'" />
+	<CurrencyCalc v-if="selectedComponent === 'CurrencyCalc'" />
 	<!-- <HamburgerCopy/> -->
 </template>
 
@@ -27,6 +30,7 @@
 	import LengthCalc from '../components/LengthCalc.vue';
 	import WeightCalc from '../components/WeightCalc.vue';
 	import TemperatureCalc from '../components/TemperatureCalc.vue';
+	import CurrencyCalc from '../components/CurrencyCalc.vue'
 	
 	export default {
 		components: {
@@ -35,6 +39,7 @@
 			LengthCalc,
 			WeightCalc,
 			TemperatureCalc,
+			CurrencyCalc,
 
 		},
 
@@ -119,6 +124,9 @@
 	}
 
 	.hamburger-component__subtitle {
+		display: flex;
+		flex-direction: column;
+		text-align: right;
 		position: absolute;
 		width: fit-content;
 		top: 7rem;
