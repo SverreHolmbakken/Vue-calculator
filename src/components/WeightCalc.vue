@@ -45,7 +45,7 @@
 	export default {
 		data() {
 			return {
-				currentInput: 1,
+				currentInput: '',
 			}
 		},
 

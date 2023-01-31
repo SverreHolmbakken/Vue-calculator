@@ -45,7 +45,7 @@
 	export default {
 		data() {
 			return {
-				currentInput: 1,
+				currentInput: '',
 			}
 		},
 
@@ -59,7 +59,7 @@
 				return Number(this.currentInput)
 			},
 			valueFeet() {
-				return (this.currentInput * 10.27)
+				return (this.currentInput * 10.28)
 			}
 		},
 

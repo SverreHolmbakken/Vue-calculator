@@ -2,7 +2,7 @@
 	<section class="hamburger-component">
 		<button @click="toggleCollapse" class="hamburger-component__button">
 			
-			<svg width="88" height="54" viewBox="0 0 88 54" fill="none" xmlns="http://www.w3.org/2000/svg">
+			<svg class="hamburger-icon" width="88" height="54" viewBox="0 0 88 54" fill="none" xmlns="http://www.w3.org/2000/svg">
 				<rect width="88" height="10" rx="5" fill="#D9D9D9"/>
 				<rect y="22" width="88" height="10" rx="5" fill="#D9D9D9"/>
 				<rect y="44" width="88" height="10" rx="5" fill="#D9D9D9"/>
@@ -65,9 +65,8 @@
 		z-index: 20;
 	}
 
-	.hamburger-component__button:hover {
-		background: yellow;
-		color: black;
+	.hamburger-icon:hover {
+		fill: #DA4567;
 	}
 
 	.hamburger-component__content,

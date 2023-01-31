@@ -20,7 +20,6 @@
 	<WeightCalc v-if="selectedComponent === 'WeightCalc'" />
 	<TemperatureCalc v-if="selectedComponent === 'TemperatureCalc'" />
 	<CurrencyCalc v-if="selectedComponent === 'CurrencyCalc'" />
-	<!-- <HamburgerCopy/> -->
 </template>
 
 <script>
